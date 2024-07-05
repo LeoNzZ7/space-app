@@ -1,8 +1,11 @@
+import { EstiloGlobais } from "./components/estilosGlobais";
+import * as c from "./styles";
+
 const App = () => {
   return(
-    <div>
-      ...
-    </div>
+    <c.fundoGradinte>
+      <EstiloGlobais />
+    </c.fundoGradinte>
   )
 }
 
