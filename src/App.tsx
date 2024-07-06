@@ -8,7 +8,14 @@ const App = () => {
     <c.fundoGradinte>
       <GlobalStyles />
       <Header />
-      <SideBar />
+      <c.AssideAndBanner>
+        <SideBar />
+        <c.Banner>
+          <span>
+            A galeria mais completa de fotos do espaço!
+          </span>
+        </c.Banner>
+      </c.AssideAndBanner>
     </c.fundoGradinte>
   )
 }
