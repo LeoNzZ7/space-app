@@ -7,7 +7,7 @@ export const SideBar = () => {
             <nav>
                 <c.StyledList>
                    <NavegationItem active={true} activeIcon="/icons/home-ativo.png" inativeIcon="/icons/home-inativo.png" >
-                        Mais Vistos
+                        Início
                    </NavegationItem>
                    <NavegationItem active={false} activeIcon="/icons/mais-vistas-ativo.png" inativeIcon="/icons/mais-vistas-inativo.png" >
                         Mais Vistos
