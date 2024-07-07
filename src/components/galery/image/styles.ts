@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const Figure = styled.figure`
-    width: 440px;
+export const Figure = styled.figure<{zoom?: boolean}>`
+    width: ${props => props.zoom ? '600px' : '440px'};
+    height: ${props => props.zoom ? 'auto' : '440px'};;
     margin: 0;
     border-radius: 20px;
     background-color: #001634;

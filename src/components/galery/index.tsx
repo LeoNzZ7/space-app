@@ -6,9 +6,12 @@ import { Tags } from "./tags";
 
 interface Props {
     photos: Photos[]
+    onSelectedPhotos: (photos: Photos) => void;
+    favorite: boolean | false;
+    onFavoriteChange: (favorite: boolean) => void;
 }
 
-export const Galery = ({ photos }: Props) => {
+export const Galery = ({ photos, onSelectedPhotos, favorite, onFavoriteChange }: Props) => {
     return(
        <>
             <Tags />
@@ -17,7 +20,13 @@ export const Galery = ({ photos }: Props) => {
                 <Title>Navegue pela galeria</Title>
                 <FluidSection>
                     {photos.map(photo => 
-                        <Image key={photo.id} photo={photo} />
+                        <Image 
+                        key={photo.id}
+                        photo={photo}
+                        favorite={favorite}
+                        onFavoriteChange={() => onFavoriteChange(!favorite)}
+                        selectedZoom={() => onSelectedPhotos(photo)}
+                        />
                     )}
                 </FluidSection>
                 </div>
